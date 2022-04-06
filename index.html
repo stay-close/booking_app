@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Your Trip.</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome cnd link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+</head>
+
+<body>
+
+
+    <header class="header_area">
+        <div class="container">
+            <h3 class="heading">Book Your Trip With <span>stay-close</span> Booking Agency. </h3>
+            <p>Your trusted travel Partner</p>
+        </div>
+    </header>
+
+    <div class="booking_container">
+        <div class="container">
+            <form class="info_form form active">
+                <h3 class="form_heading">Please Fill The Form Below.</h3>
+                <div class="input_group">
+                    <label for="fullname">full name<span>*</span> :</label>
+                    <input type="text" id="fullname" placeholder="Full Name">
+                </div>
+                <div class="input_group">
+                    <label for="email">Email<span>*</span> :</label>
+                    <input type="email" id="email" placeholder="Your Email">
+                </div>
+                <div class="input_group">
+                    <label for="fromwhere">From Where<span>*</span>  :</label>
+                    <input type="text" id="fromwhere" placeholder="Enter A City">
+                </div>
+                <div class="input_group">
+                    <label for="destination">Destination<span>*</span> :</label>
+                    <input type="text" id="destination" placeholder="Destination City">
+                </div>
+                <div class="input_group">
+                    <label for="date">Date<span>*</span> :</label>
+                    <input type="text" id="date" placeholder="Select A Date">
+                </div>
+                <div class="input_group">
+                    <label for="time">Time<span>*</span> :</label>
+                    <input type="text" id="time" placeholder="Select A Time">
+                </div>
+                <div class="input_group">
+                    <label for="adult">adult (Over 15 years)<span>*</span> :</label>
+                    <input type="number" id="adult" placeholder="Number Of Adult Person">
+                </div>
+                <div class="input_group">
+                    <label for="child">Children (Under 15 Years) :</label>
+                    <input type="number" id="child" placeholder="Number Of Children">
+                </div>
+                <div class="input_group">
+                    <input type="submit" value="Search Your Flight">
+                </div>
+
+            </form>
+
+            <form class="confirm_details form">
+                <h3 class="form_heading">Hello <span class="customer_name">swapan Sarker</span> Please review and confirm your booking details bellow.</h3>
+                <table class="info_table">
+
+                    <!-- <tr>
+                        <td>Full Name</td>
+                        <td class="customer_name"> swapan sarker</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td class="email">hello@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>From Where</td>
+                        <td class="fromwhere">Dhaka</td>
+                    </tr>
+                    <tr>
+                        <td>Your Destination</td>
+                        <td class="destination">CoxBazar</td>
+                    </tr>
+                    <tr>
+                        <td>Date </td>
+                        <td class="date">15/10/2022</td>
+                    </tr>
+                    <tr>
+                        <td>Time </td>
+                        <td class="time">01:20 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Adult </td>
+                        <td class="adult">5</td>
+                    </tr>
+                    <tr>
+                        <td>Children </td>
+                        <td class="child">2</td>
+                    </tr> -->
+
+
+                </table>
+                <div class="btn_group">
+                    <button type="button" class="pre_btn">Edit</button>
+                    <button class="confirm_info" type="submit">Confirm</button>
+                </div>
+
+            </form>
+
+            <form class="payment_info form">
+                <h3 class="form_heading">Billing Information</h3>
+                <div class="bill_info">
+                    <h3>You Select 5 Adult Person($120 per adult) : 5 *120= $600</h3>
+                    <h3>You Select 5 child Person($60 per adult) : 5 *60= $300</h3>
+                    <h3>total amount to pay = $900</h3>
+                </div>
+
+                <input class="confirm_payment" type="submit" value="Confirm Payment">
+            </form>
+
+            <form class="ok_form form">
+                <i class="fa-solid fa-check"></i>
+                <h2>Congratulation ! Your Trip is booked.</h2>
+                <h3>Thanks for being with us.</h3>
+                <h4>for more info please check your email.</h4>
+                <p> <span>stay-close</span> team.</p>
+
+                <input class="ok" type="submit" value="OK">
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="apps.js"></script>
+</body>
+
+</html>

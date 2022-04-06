@@ -1,0 +1,97 @@
+/* ---GOOGLE FONTS---- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ---GLOBAL CSS--- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form {
+    width: 50%;
+    position: absolute;
+    border: 2px solid red;
+    left: 300%;
+    transform: translate(-50%);
+}
+
+.form.active {
+    left: 50%;
+}
+
+
+/* ---header area--- */
+
+.header_area {
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+/* ----info form--- */
+
+.booking_container {
+    position: relative;
+}
+
+.info_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+.info_form .form_heading {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.input_group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.input_group label {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.input_group label span {
+    color: red;
+}
+
+.input_group input {
+    width: 100%;
+    padding: 8px 5px;
+}
+
+
+/* ---confirm details--- */
+
+.confirm_details {
+    padding: 20px;
+}
+
+.info_table {
+    width: 100%;
+    padding: 10px;
+}
+
+.info_table td {
+    border-bottom: 1px solid red;
+    padding: 10px;
+}
+
+
+/* ----PAYMENT OPTION----- */
