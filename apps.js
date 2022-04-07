@@ -19,7 +19,9 @@ const infoForm = document.querySelector('.info_form');
 const confirmForm = document.querySelector('.confirm_details');
 const paymentForm = document.querySelector('.payment_info');
 const okForm = document.querySelector('.ok_form');
-const billInfo = document.querySelector('.bill_info');
+const billInfo = document.querySelector('.billing_table');
+const editBtn = document.querySelector('.edit_btn');
+const customerName = document.querySelector('.customer_name');
 infoForm.addEventListener('submit', (e) => {
     e.preventDefault();
     infoForm.classList.remove('active');
@@ -32,6 +34,8 @@ infoForm.addEventListener('submit', (e) => {
     const time = document.querySelector('#time').value;
     const adult = document.querySelector('#adult').value;
     const child = document.querySelector('#child').value;
+    customerName.innerText = fullName;
+    tableInfo.innerHTML = "";
     tableInfo.innerHTML = `
             <tr>
                 <td>Full Name</td>
@@ -67,29 +71,50 @@ infoForm.addEventListener('submit', (e) => {
             </tr>
 
 `;
+    billInfo.innerHTML = '';
     billInfo.innerHTML = `
-        <h3>You Select ${adult} Adult Person($120 per adult) : ${adult}* $120 = $${adult * 120}</h3>
-        <h3>You Select ${child} child Person($60 per adult) : ${child} * $60= $${child * 60}</h3>
-        <h3>total amount to pay = $${(adult * 120) + (child * 60)}</h3>
+       
+        <tr>
+            <td>You Select ${adult} Adult Person($120 Per Adult)</td>
+            <td>: $120 * ${adult}  = $${adult * 120}</td>
+        </tr>
+        <tr>
+            <td>You Select ${child} Child ($60 Per Child)</td>
+            <td>:  $60 * ${child} = $${child * 60}</td>
+        </tr>
+        <tr>
+            <td>total amount to pay </td>
+            <td>: $${(adult * 120) + (child * 60)}</td>
+        </tr>
+        <tr>
+            <td>Payment Method</td>
+            <td>: <select name="payment method" id="payment_method">
+            <option value="bkash" selected>Bkash</option>
+            <option value="rocket">Rocket</option>
+            <option value="nagad">Nagad</option>
+            <option value="upay">Upay</option>
+        </select> </td>
+        </tr>
 
 `
 
-})
+});
+editBtn.addEventListener('click', (e) => {
+    e.preventDefault();
 
+    confirmForm.classList.remove('active');
+    infoForm.classList.add('active')
+
+})
 confirmForm.addEventListener('submit', (e) => {
     e.preventDefault();
     confirmForm.classList.remove('active');
     paymentForm.classList.add('active');
 
-})
+});
 
 paymentForm.addEventListener('submit', (e) => {
     e.preventDefault();
     paymentForm.classList.remove('active');
     okForm.classList.add('active');
-})
-okForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    okForm.classList.remove('active');
-    infoForm.classList.add('active');
-})
+});
