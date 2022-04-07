@@ -187,10 +187,16 @@ table td {
 /* ---payment method-- */
 
 #payment_method {
-    width: 150px;
+    width: auto;
     padding: 5px;
     border: none;
     outline: none;
+    background: transparent;
+    color: #0abde3;
+}
+
+#payment_method option {
+    background: transparent;
 }
 
 

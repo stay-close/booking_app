@@ -1,0 +1,16 @@
+/* responsive css */
+
+@media(max-width: 991px) {
+    .info_form {
+        grid-template-columns: 1fr;
+    }
+    .info_form .form_heading {
+        grid-column: span 1;
+    }
+    body {
+        height: 200vh;
+    }
+    .form {
+        width: 90%;
+    }
+}
