@@ -9,6 +9,7 @@
     }
     body {
         height: 160vh;
+        overflow-y:hidden;
     }
     .form {
         width: 90%;
